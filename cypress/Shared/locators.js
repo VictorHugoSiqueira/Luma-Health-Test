@@ -2,9 +2,9 @@ export class Locators {
     home() {
         return {
             LANDING_PAGE_LOCATORS: {
-                NAV_BAR: "#navbar",
-                LOGIN_BTN: "#header_login",
-                GET_DEMO_BTN: "//a[@id='header_login']/following-sibling::a",
+                NAV_BAR: "//nav[@id='navbar']",
+                LOGIN_BTN: "//a[@title='Log in']",
+                GET_DEMO_BTN: "//a[@title='Log in']/following-sibling::a",
                 NAV_BAR_LOGO: "//a[@class='navbar-logo']",
                 PLATFORM_BTN: "//ul[@class='main-menu-v2']/li[1]/a[1]",
                 WHO_WE_SERVE_BTN: "//ul[@class='main-menu-v2']/li[2]/a[1]",

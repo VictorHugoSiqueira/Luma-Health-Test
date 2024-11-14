@@ -59,3 +59,13 @@ describe("Go to PAGE NOT FOUND 404", () => {
     pageNotFound.checkElementsOnPageNotFound();
   });
 });
+
+describe("Go to Demo Page, Check URL, Verify Elements and fill up Forms", () => {
+  it("Check Demo Page URL", () => {
+    getADemoForm.checkDemoPageUrlPage();
+  });
+
+  it("Check Elements on Demo Page", () => {
+    getADemoForm.checkElementsOnDemoPage();
+  });
+});
