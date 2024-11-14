@@ -1,23 +1,17 @@
 <h1> Luma Health </b> </h1>
 
-## <b> ``Introdução`` </b>
+## <b> ``Introduction`` </b>
 
 This automation covers the following three scenarios on the Luma Health website ( https://www.lumahealth.io/) :
 1. Homepage Validation
     ○ Verify that the homepage loads successfully.
-    ○ Check that main elements on the homepage (e.g., navigation bar, hero section,
+    ○ Check that main elements on the homepage (navigation bar, hero section,
 footer) are visible and functional.
 2. Navigation Links
     ○ Test that all main navigation links direct the user to the correct pages.
     ○ Ensure that each page loads successfully and displays the expected content.
-3. Contact Form (if available)
-    ○ Test that the contact form loads correctly.
-    ○ Verify required fields (e.g., name, email) and check that validation messages
-    appear when fields are left empty.
-    ○ Ensure that the form can be successfully submitted with valid inputs.
 
 ## <b> ``Executing Automated Tests`` </b>
-
 - Required Apps:
     - Node.js ( https://nodejs.org/en/download/ )
 - Download project LumaTest on Github
