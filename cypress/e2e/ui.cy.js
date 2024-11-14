@@ -1,27 +1,18 @@
 /// <reference types="cypress" />
 
+import getADemoForm from "../PageObject/GetADemoForms/getADemoForm";
 import landingPage from "../PageObject/LandingPage/landingPage";
+import pageNotFound from "../PageObject/NotFound404/pageNotFound";
 import texts from "../Shared/texts";
-// import vehiclePage from "../Page Object/Vehicle Data/vehicleData";
-// import insurantPage from "../Page Object/Insurant Data/insurantData";
-// import productData from "../Page Object/Product Data/productData";
-// import priceOption from "../Page Object/Price Option/priceOption";
-// import sendQuote from "../Page Object/Send Quote/sendQuote";
 
 const { LANDING_PAGE } = texts.home();
+const { NOT_FOUND_PAGE } = texts.home();
 
-// describe('template spec', () => {
-//   it('passes', () => {
-//     cy.visit('https://www.lumahealth.io/')
-//   })
-// })
-
+before(() => {
+  cy.visit(LANDING_PAGE.URL_HOME);
+});
 
 describe("Access Luma Health website", () => {
-  before(() => {
-    cy.visit(LANDING_PAGE.URL_HOME);
-  });
-
   it("Check URL", () => {
     landingPage.checkUrlPage();
   });
@@ -52,5 +43,19 @@ describe("Access Luma Health website", () => {
 
   it("Hover over About Us navigation Bar Item and check list", () => {
     landingPage.hoverAboutUsItem();
+  });
+});
+
+describe("Go to PAGE NOT FOUND 404", () => {
+  before(() => {
+    cy.visit(NOT_FOUND_PAGE.NOT_FOUND, { failOnStatusCode: false });
+  });
+  
+  it("Check 404 Page not found URL", () => {
+    pageNotFound.checkNotFoundPageURL();
+  });
+
+  it("Assert Texts and Elements on Page Not Found", () => {
+    pageNotFound.checkElementsOnPageNotFound();
   });
 });
