@@ -21,6 +21,17 @@ footer) are visible and functional.
     ○.Cypress tests on every pull request or push to the main branch. <br>
     ○ pipeline can generate and store test reports. <br>
 
+## As you can see, just below we have only 1 test failing in the pipeline
+
+the problem I faced when filling out the form that appears when clicking on Get Demo button on the Landing page
+
+Unlike other tools, Cypress cannot interact with cross-origin iframes due to security restrictions. This problem is common when the iframe is hosted on an external domain and, for security reasons, does not allow a website from a different domain to interact with it.
+
+A common solution is to simulate the content of the iframe in a local environment, if you have access to the content it loads. This way, you can remove the dependency on the external domain and avoid the cross-origin problem.
+
+We could also just check the sending of data (for example, when filling out a form inside the iframe), you can interact directly with the API or the endpoint responsible for processing the data, instead of simulating the complete interaction with the iframe.
+
+Or use another tool for Cross-Origin Iframe Automation
 ![image](https://github.com/user-attachments/assets/63306fb4-f4c9-4a81-8399-cc3b808b5ca1)
 
    
